@@ -15,13 +15,14 @@ function OnEvent(event, arg)
 	
 	if agacharse == true then
 		PressAndReleaseKey("c")
-		if tespera < 10 then
+		while tespera < 10 do
 			Sleep(100)
 			tespera = tespera + 1
-		elseif tespera >= 10 then
+		end
+		if tespera >= 10 then
 			tumbarse = true
 		end
-	elseif agacharse == true and tumbarse == true then
+	elseif tumbarse == true then
 		PressAndReleaseKey("z")
 	end
 	
